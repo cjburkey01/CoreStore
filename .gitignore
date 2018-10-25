@@ -1,0 +1,14 @@
+# Idea
+.idea
+*.iml
+
+# Mac
+*.DS_Store
+*/MacOSX
+
+# Maven
+target
+
+# Java
+bin
+*.class
