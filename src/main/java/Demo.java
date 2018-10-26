@@ -2,6 +2,9 @@ import com.cjburkey.corestore.Store;
 import com.cjburkey.corestore.io.StoreIO;
 import java.io.File;
 
+/**
+ * Created by CJ Burkey 2018/10/23
+ */
 public final class Demo {
     
     private static final File exampleFile = new File(System.getProperty("user.home"), "/Desktop/test.bs");

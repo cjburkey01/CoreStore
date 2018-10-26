@@ -17,6 +17,11 @@ import it.unimi.dsi.fastutil.shorts.Short2ObjectOpenHashMap;
 
 import static com.cjburkey.corestore.StoreSettings.*;
 
+/**
+ * Created by CJ Burkey 2018/10/23
+ * 
+ * @since 0.0.1
+ */
 @SuppressWarnings({"WeakerAccess", "unchecked"})
 public final class DataTypes {
     
@@ -24,6 +29,13 @@ public final class DataTypes {
     private static final Object2ObjectOpenHashMap<String, DataType<?>> registeredTypeHandlersByClass = new Object2ObjectOpenHashMap<>();
     private static final Short2ObjectOpenHashMap<DataType<?>> registeredTypeHandlersById = new Short2ObjectOpenHashMap<>();
     
+    /**
+     * @since 0.0.1
+     * @param type The type for which to check if a handler is
+     *             registered
+     * @return Whether there is a {@code DataType} registered for
+     *         the provided class
+     */
     public static <T> boolean getHasHandler(@NotNull Class<T> type) {
         tryInit();
         return registeredTypeHandlersByClass.containsKey(type.getName());
@@ -47,11 +59,26 @@ public final class DataTypes {
         return true;
     }
     
+    /**
+     * Registers the provided type handler if a type handler for the same
+     * class and a type handler with the same identifier are not already
+     * reigstered
+     * 
+     * @since 0.0.1
+     * @param handler The handler to register
+     * @return Whether the handler was registered successfully
+     */
     @SuppressWarnings("unused")
     private static <T> boolean registerHandler(@NotNull DataType<T> handler) {
         return registerHandler(handler, true);
     }
     
+    /**
+     * @since 0.0.1
+     * @param type The type of data for which the handler will be
+     *             retrieved
+     * @return The handler for the provided type of data
+     */
     @Nullable
     public static <T> DataType<T> getHandler(@NotNull Class<T> type) {
         tryInit();
@@ -61,11 +88,23 @@ public final class DataTypes {
         return null;
     }
     
+    /**
+     * @since 0.0.1
+     * @param value The data for which the handler will be
+     *              retrieved
+     * @return The handler for the provided type of data
+     */
     @Nullable
     public static <T> DataType<T> getHandler(@NotNull T value) {
         return (DataType<T>) getHandler(value.getClass());
     }
     
+    /**
+     * @since 0.0.1
+     * @param dataTypeId The data type identifier
+     * @return The data handler registered with the provided
+     *         data type identifier
+     */
     @Nullable
     public static DataType<?> getHandlerById(short dataTypeId) {
         tryInit();

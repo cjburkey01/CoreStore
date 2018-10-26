@@ -5,6 +5,11 @@ import java.nio.ByteBuffer;
 import java.nio.charset.Charset;
 import java.nio.charset.StandardCharsets;
 
+/**
+ * Created by CJ Burkey 2018/10/23
+ * 
+ * @since 0.0.1
+ */
 public final class DataTypeString extends DataType<String> {
     
     public static final short ID = 8;

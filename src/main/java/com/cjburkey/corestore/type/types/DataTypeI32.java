@@ -3,6 +3,11 @@ package com.cjburkey.corestore.type.types;
 import com.cjburkey.corestore.type.DataType;
 import java.nio.ByteBuffer;
 
+/**
+ * Created by CJ Burkey 2018/10/23
+ * 
+ * @since 0.0.1
+ */
 public final class DataTypeI32 extends DataType<Integer> {
     
     public static final short ID = 5;

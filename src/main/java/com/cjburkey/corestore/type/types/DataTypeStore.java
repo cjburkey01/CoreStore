@@ -9,6 +9,11 @@ import java.nio.ByteBuffer;
 
 import static com.cjburkey.corestore.StoreSettings.*;
 
+/**
+ * Created by CJ Burkey 2018/10/24
+ * 
+ * @since 0.0.1
+ */
 public class DataTypeStore extends DataType<Store> {
     
     public static final short ID = 9;

@@ -14,6 +14,12 @@ import java.nio.charset.StandardCharsets;
 import static com.cjburkey.corestore.StoreSettings.*;
 import static com.cjburkey.corestore.io.Util.*;
 
+/**
+ * Created by CJ Burkey 2018/10/23
+ * 
+ * Version '0' of the store storage handlers
+ * @since 0.0.1
+ */
 @SuppressWarnings("unchecked")
 public class StoreHandler0 extends StoreHandler {
     
